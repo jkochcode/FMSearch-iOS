@@ -13,15 +13,13 @@ struct CrewRow: View {
 
     var body: some View {
         HStack {
-            PosterImage(
-                image: FetchImage(
-                    url: URL(
-                        string:
-                        "https://image.tmdb.org/t/p/w185/\(crew.profilePath ?? "")"
-                    )!),
-                small: true
-            )
-            .cornerRadius(4)
+            if let profilePath = crew.profilePath {
+                PosterImage(path: profilePath, small: true)
+            } else {
+                Image("placeholder")
+                    .resizable()
+                    .frame(width: 80, height: 120)
+            }
             VStack(alignment: .leading, spacing: 4) {
                 Text(crew.name)
                 Text(crew.job)

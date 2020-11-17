@@ -11,8 +11,6 @@ import SwiftUI
 struct SearchView: View {
     @ObservedObject var viewModel: SearchViewModel
 
-    //  @Binding var isPresented: Bool
-
     var body: some View {
         VStack {
             SearchBar(searchText: $viewModel.query)
@@ -25,14 +23,13 @@ struct SearchView: View {
                             publisher: viewModel.loadMovie(id: movie.id))
                     ) {
                         HStack {
-                            PosterImage(
-                                image: FetchImage(
-                                    url: URL(
-                                        string:
-                                        "https://image.tmdb.org/t/p/w500/\(movie.posterPath ?? "")"
-                                    )!),
-                                small: true
-                            )
+                            if let posterPath = movie.posterPath {
+                                PosterImage(path: posterPath, small: true)
+                            } else {
+                                Image("placeholder")
+                                    .resizable()
+                                    .frame(width: 80, height: 120)
+                            }
                             VStack(alignment: .leading) {
                                 Text(movie.title)
                                     .font(.headline)

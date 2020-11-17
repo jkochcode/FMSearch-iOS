@@ -19,13 +19,7 @@ struct MovieDetailView: View {
             ScrollView(showsIndicators: false) {
                 VStack(spacing: 16) {
                     VStack(spacing: 4) {
-                        PosterImage(
-                            image: FetchImage(
-                                url: URL(
-                                    string:
-                                    "https://image.tmdb.org/t/p/w500/\(detail.movie.posterPath ?? "")"
-                                )!)
-                        )
+                        PosterImage(path: detail.movie.posterPath ?? "")
                         Text(detail.movie.title)
                             .font(.headline)
                         if let date = detail.movie.releaseDate {

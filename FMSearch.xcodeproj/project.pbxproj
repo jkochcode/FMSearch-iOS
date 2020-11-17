@@ -25,8 +25,6 @@
 		07AAE8D025573E4C000E2638 /* PublishedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AAE8CF25573E4C000E2638 /* PublishedObject.swift */; };
 		07AAE8E225575121000E2638 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AAE8E125575121000E2638 /* SearchView.swift */; };
 		07AAE8FC255765E1000E2638 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AAE8FB255765E1000E2638 /* Formatters.swift */; };
-		07AD1F8E25579E3400C6E365 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 07AD1F8D25579E3400C6E365 /* Nuke */; };
-		07AD1F9425579E4700C6E365 /* FetchImage in Frameworks */ = {isa = PBXBuildFile; productRef = 07AD1F9325579E4700C6E365 /* FetchImage */; };
 		07AD1F9925579E7300C6E365 /* PosterImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AD1F9825579E7300C6E365 /* PosterImage.swift */; };
 		07AD1F9F2558C5AE00C6E365 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AD1F9E2558C5AE00C6E365 /* SearchBar.swift */; };
 		07EADF2D2561B31400786F36 /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EADF2C2561B31400786F36 /* MovieDetailView.swift */; };
@@ -39,6 +37,7 @@
 		07FF3F782563A3B0009B2238 /* CrewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FF3F772563A3B0009B2238 /* CrewRow.swift */; };
 		07FF3F802563A54F009B2238 /* CrewListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FF3F7F2563A54F009B2238 /* CrewListView.swift */; };
 		07FF3F92256470BA009B2238 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 07FF3F91256470BA009B2238 /* .swiftlint.yml */; };
+		07FF3F9F256477AC009B2238 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 07FF3F9E256477AC009B2238 /* KingfisherSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,8 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07AD1F8E25579E3400C6E365 /* Nuke in Frameworks */,
-				07AD1F9425579E4700C6E365 /* FetchImage in Frameworks */,
+				07FF3F9F256477AC009B2238 /* KingfisherSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,8 +287,7 @@
 			);
 			name = FMSearch;
 			packageProductDependencies = (
-				07AD1F8D25579E3400C6E365 /* Nuke */,
-				07AD1F9325579E4700C6E365 /* FetchImage */,
+				07FF3F9E256477AC009B2238 /* KingfisherSwiftUI */,
 			);
 			productName = FMSearch;
 			productReference = 07AAE87025567A6C000E2638 /* FMSearch.app */;
@@ -364,8 +361,7 @@
 			);
 			mainGroup = 07AAE86725567A6C000E2638;
 			packageReferences = (
-				07AD1F8C25579E3400C6E365 /* XCRemoteSwiftPackageReference "Nuke" */,
-				07AD1F9225579E4700C6E365 /* XCRemoteSwiftPackageReference "FetchImage" */,
+				07FF3F9D256477AC009B2238 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 07AAE87125567A6C000E2638 /* Products */;
 			projectDirPath = "";
@@ -793,34 +789,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		07AD1F8C25579E3400C6E365 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+		07FF3F9D256477AC009B2238 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/kean/Nuke.git";
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 9.1.2;
-			};
-		};
-		07AD1F9225579E4700C6E365 /* XCRemoteSwiftPackageReference "FetchImage" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/kean/FetchImage";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.2.1;
+				minimumVersion = 5.15.7;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		07AD1F8D25579E3400C6E365 /* Nuke */ = {
+		07FF3F9E256477AC009B2238 /* KingfisherSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 07AD1F8C25579E3400C6E365 /* XCRemoteSwiftPackageReference "Nuke" */;
-			productName = Nuke;
-		};
-		07AD1F9325579E4700C6E365 /* FetchImage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 07AD1F9225579E4700C6E365 /* XCRemoteSwiftPackageReference "FetchImage" */;
-			productName = FetchImage;
+			package = 07FF3F9D256477AC009B2238 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = KingfisherSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

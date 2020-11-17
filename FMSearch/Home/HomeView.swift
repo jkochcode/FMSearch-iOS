@@ -34,14 +34,7 @@ struct HomeView: View {
                                             publisher: viewModel.loadMovie(
                                                 id: movie.id))
                                     ) {
-                                        PosterImage(
-                                            image: FetchImage(
-                                                url: URL(
-                                                    string:
-                                                    "https://image.tmdb.org/t/p/w500/\(movie.posterPath)"
-                                                )!)
-                                        )
-                                        .cornerRadius(4)
+                                        PosterImage(path: movie.posterPath)
                                     }
                                 }
                             }
@@ -60,15 +53,8 @@ struct HomeView: View {
                                 ],
                                 spacing: 8
                             ) {
-                                ForEach(trending.shows) { movie in
-                                    PosterImage(
-                                        image: FetchImage(
-                                            url: URL(
-                                                string:
-                                                "https://image.tmdb.org/t/p/w500/\(movie.posterPath)"
-                                            )!)
-                                    )
-                                    .cornerRadius(4)
+                                ForEach(trending.shows) { show in
+                                    PosterImage(path: show.posterPath)
                                 }
                             }
                         }
