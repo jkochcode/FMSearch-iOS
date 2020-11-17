@@ -109,7 +109,10 @@ struct NetworkManager {
 
     func loadTVDetail(for id: Int) -> AnyPublisher<TVDetail, Error> {
         var components = URLComponents(string: "\(baseUrl)/tv/\(id)")!
-        components.queryItems = [apiKey]
+        components.queryItems = [
+            apiKey,
+            URLQueryItem(name: "append_to_response", value: "credits")
+        ]
 
         return URLSession.shared.publisher(
             for: components.url!, decoder: decoder

@@ -54,7 +54,13 @@ struct HomeView: View {
                                 spacing: 8
                             ) {
                                 ForEach(trending.shows) { show in
-                                    PosterImage(path: show.posterPath)
+                                    NavigationLink(
+                                        destination: TVDetailView(
+                                            publisher: viewModel.loadShow(
+                                                id: show.id))
+                                    ) {
+                                        PosterImage(path: show.posterPath)
+                                    }
                                 }
                             }
                         }
