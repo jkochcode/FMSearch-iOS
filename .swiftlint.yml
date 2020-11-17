@@ -1,0 +1,8 @@
+identifier_name:
+  excluded: # excluded via string array
+    - id
+    - URL
+    - GlobalAPIKey
+line_length:
+  ignores_comments: true
+  

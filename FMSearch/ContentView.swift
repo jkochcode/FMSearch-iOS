@@ -8,9 +8,34 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var isPresented = false
+
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            ScrollView {
+                HomeView()
+                    .toolbar {
+                        ToolbarItem(placement: .primaryAction) {
+                            VStack {
+                                Button(
+                                    action: { isPresented.toggle() },
+                                    label: {
+                                        Image(systemName: "magnifyingglass")
+                                    }
+                                )
+                                NavigationLink(
+                                    destination: SearchView(
+                                        viewModel: SearchViewModel()),
+                                    isActive: $isPresented
+                                ) { EmptyView() }
+                            }
+                        }
+                    }
+                Spacer()
+                AcknowledgementText()
+            }
+            .navigationBarTitle("Home")
+        }
     }
 }
 

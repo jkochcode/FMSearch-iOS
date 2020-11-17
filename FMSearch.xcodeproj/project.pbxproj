@@ -3,16 +3,42 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		078EDEEC255A174C0000F9B2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078EDEEB255A174C0000F9B2 /* HomeView.swift */; };
+		078EDEF1255A19030000F9B2 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078EDEF0255A19030000F9B2 /* HomeViewModel.swift */; };
+		078EDEFB255A498B0000F9B2 /* AcknowledgementText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078EDEFA255A498B0000F9B2 /* AcknowledgementText.swift */; };
+		078EDF01255CC89E0000F9B2 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078EDF00255CC89E0000F9B2 /* NetworkManager.swift */; };
+		079A1CAF256343A800E934D2 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079A1CAE256343A800E934D2 /* Movie.swift */; };
 		07AAE87425567A6C000E2638 /* FMSearchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AAE87325567A6C000E2638 /* FMSearchApp.swift */; };
 		07AAE87625567A6C000E2638 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AAE87525567A6C000E2638 /* ContentView.swift */; };
 		07AAE87825567A6C000E2638 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07AAE87725567A6C000E2638 /* Assets.xcassets */; };
 		07AAE87B25567A6C000E2638 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07AAE87A25567A6C000E2638 /* Preview Assets.xcassets */; };
 		07AAE88625567A6C000E2638 /* FMSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AAE88525567A6C000E2638 /* FMSearchTests.swift */; };
 		07AAE89125567A6C000E2638 /* FMSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AAE89025567A6C000E2638 /* FMSearchUITests.swift */; };
+		07AAE8A225567A98000E2638 /* LoadableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AAE8A125567A98000E2638 /* LoadableObject.swift */; };
+		07AAE8A725567AB3000E2638 /* AsyncContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AAE8A625567AB3000E2638 /* AsyncContentView.swift */; };
+		07AAE8B625568AF5000E2638 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AAE8B525568AF5000E2638 /* SearchViewModel.swift */; };
+		07AAE8C3255694C7000E2638 /* URLSession+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AAE8C2255694C7000E2638 /* URLSession+Ext.swift */; };
+		07AAE8D025573E4C000E2638 /* PublishedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AAE8CF25573E4C000E2638 /* PublishedObject.swift */; };
+		07AAE8E225575121000E2638 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AAE8E125575121000E2638 /* SearchView.swift */; };
+		07AAE8FC255765E1000E2638 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AAE8FB255765E1000E2638 /* Formatters.swift */; };
+		07AD1F8E25579E3400C6E365 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 07AD1F8D25579E3400C6E365 /* Nuke */; };
+		07AD1F9425579E4700C6E365 /* FetchImage in Frameworks */ = {isa = PBXBuildFile; productRef = 07AD1F9325579E4700C6E365 /* FetchImage */; };
+		07AD1F9925579E7300C6E365 /* PosterImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AD1F9825579E7300C6E365 /* PosterImage.swift */; };
+		07AD1F9F2558C5AE00C6E365 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AD1F9E2558C5AE00C6E365 /* SearchBar.swift */; };
+		07EADF2D2561B31400786F36 /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EADF2C2561B31400786F36 /* MovieDetailView.swift */; };
+		07EADF382561B4CF00786F36 /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EADF372561B4CF00786F36 /* MovieDetail.swift */; };
+		07EADF3D2561B6B000786F36 /* TVDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EADF3C2561B6B000786F36 /* TVDetail.swift */; };
+		07EADF422561B86800786F36 /* CreditDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EADF412561B86800786F36 /* CreditDetail.swift */; };
+		07EADF4B2561BCFA00786F36 /* Crew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EADF4A2561BCFA00786F36 /* Crew.swift */; };
+		07FF3F6525639A28009B2238 /* Array+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FF3F6425639A28009B2238 /* Array+Ext.swift */; };
+		07FF3F6B25639CB7009B2238 /* ListRowModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FF3F6A25639CB7009B2238 /* ListRowModifier.swift */; };
+		07FF3F782563A3B0009B2238 /* CrewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FF3F772563A3B0009B2238 /* CrewRow.swift */; };
+		07FF3F802563A54F009B2238 /* CrewListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FF3F7F2563A54F009B2238 /* CrewListView.swift */; };
+		07FF3F92256470BA009B2238 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 07FF3F91256470BA009B2238 /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +59,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		078EDEEB255A174C0000F9B2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		078EDEF0255A19030000F9B2 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		078EDEFA255A498B0000F9B2 /* AcknowledgementText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowledgementText.swift; sourceTree = "<group>"; };
+		078EDF00255CC89E0000F9B2 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		079A1CAE256343A800E934D2 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		07AAE87025567A6C000E2638 /* FMSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FMSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07AAE87325567A6C000E2638 /* FMSearchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMSearchApp.swift; sourceTree = "<group>"; };
 		07AAE87525567A6C000E2638 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +76,25 @@
 		07AAE88C25567A6C000E2638 /* FMSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FMSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07AAE89025567A6C000E2638 /* FMSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMSearchUITests.swift; sourceTree = "<group>"; };
 		07AAE89225567A6C000E2638 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07AAE8A125567A98000E2638 /* LoadableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableObject.swift; sourceTree = "<group>"; };
+		07AAE8A625567AB3000E2638 /* AsyncContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncContentView.swift; sourceTree = "<group>"; };
+		07AAE8B525568AF5000E2638 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		07AAE8C2255694C7000E2638 /* URLSession+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Ext.swift"; sourceTree = "<group>"; };
+		07AAE8CF25573E4C000E2638 /* PublishedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishedObject.swift; sourceTree = "<group>"; };
+		07AAE8E125575121000E2638 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		07AAE8FB255765E1000E2638 /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
+		07AD1F9825579E7300C6E365 /* PosterImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterImage.swift; sourceTree = "<group>"; };
+		07AD1F9E2558C5AE00C6E365 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		07EADF2C2561B31400786F36 /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
+		07EADF372561B4CF00786F36 /* MovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetail.swift; sourceTree = "<group>"; };
+		07EADF3C2561B6B000786F36 /* TVDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVDetail.swift; sourceTree = "<group>"; };
+		07EADF412561B86800786F36 /* CreditDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditDetail.swift; sourceTree = "<group>"; };
+		07EADF4A2561BCFA00786F36 /* Crew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crew.swift; sourceTree = "<group>"; };
+		07FF3F6425639A28009B2238 /* Array+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Ext.swift"; sourceTree = "<group>"; };
+		07FF3F6A25639CB7009B2238 /* ListRowModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowModifier.swift; sourceTree = "<group>"; };
+		07FF3F772563A3B0009B2238 /* CrewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewRow.swift; sourceTree = "<group>"; };
+		07FF3F7F2563A54F009B2238 /* CrewListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewListView.swift; sourceTree = "<group>"; };
+		07FF3F91256470BA009B2238 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +102,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07AD1F8E25579E3400C6E365 /* Nuke in Frameworks */,
+				07AD1F9425579E4700C6E365 /* FetchImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,9 +124,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		078EDEFF255CC7380000F9B2 /* MovieDetail */ = {
+			isa = PBXGroup;
+			children = (
+				07EADF2C2561B31400786F36 /* MovieDetailView.swift */,
+			);
+			path = MovieDetail;
+			sourceTree = "<group>";
+		};
+		079A2EB52559DB6D00F7F479 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				07AAE8C2255694C7000E2638 /* URLSession+Ext.swift */,
+				07FF3F6425639A28009B2238 /* Array+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		079A2EB6255A0DFB00F7F479 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				078EDEEB255A174C0000F9B2 /* HomeView.swift */,
+				078EDEF0255A19030000F9B2 /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		07AAE86725567A6C000E2638 = {
 			isa = PBXGroup;
 			children = (
+				07FF3F91256470BA009B2238 /* .swiftlint.yml */,
 				07AAE87225567A6C000E2638 /* FMSearch */,
 				07AAE88425567A6C000E2638 /* FMSearchTests */,
 				07AAE88F25567A6C000E2638 /* FMSearchUITests */,
@@ -95,11 +174,18 @@
 		07AAE87225567A6C000E2638 /* FMSearch */ = {
 			isa = PBXGroup;
 			children = (
+				07EADF362561B4C500786F36 /* Models */,
+				078EDEFF255CC7380000F9B2 /* MovieDetail */,
+				079A2EB6255A0DFB00F7F479 /* Home */,
+				07AD1F9D2558C59600C6E365 /* Views */,
+				07AAE8FA255765CC000E2638 /* Utilities */,
+				07AAE8B425568AEC000E2638 /* Search */,
 				07AAE87325567A6C000E2638 /* FMSearchApp.swift */,
 				07AAE87525567A6C000E2638 /* ContentView.swift */,
 				07AAE87725567A6C000E2638 /* Assets.xcassets */,
 				07AAE87C25567A6C000E2638 /* Info.plist */,
 				07AAE87925567A6C000E2638 /* Preview Content */,
+				078EDF00255CC89E0000F9B2 /* NetworkManager.swift */,
 			);
 			path = FMSearch;
 			sourceTree = "<group>";
@@ -130,6 +216,60 @@
 			path = FMSearchUITests;
 			sourceTree = "<group>";
 		};
+		07AAE8B425568AEC000E2638 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				07AAE8B525568AF5000E2638 /* SearchViewModel.swift */,
+				07AAE8E125575121000E2638 /* SearchView.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		07AAE8FA255765CC000E2638 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				07FF3F6925639CAB009B2238 /* Modifiers */,
+				079A2EB52559DB6D00F7F479 /* Extensions */,
+				07AAE8CF25573E4C000E2638 /* PublishedObject.swift */,
+				07AAE8FB255765E1000E2638 /* Formatters.swift */,
+				07AAE8A125567A98000E2638 /* LoadableObject.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		07AD1F9D2558C59600C6E365 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				07FF3F772563A3B0009B2238 /* CrewRow.swift */,
+				07FF3F7F2563A54F009B2238 /* CrewListView.swift */,
+				07AD1F9825579E7300C6E365 /* PosterImage.swift */,
+				07AAE8A625567AB3000E2638 /* AsyncContentView.swift */,
+				07AD1F9E2558C5AE00C6E365 /* SearchBar.swift */,
+				078EDEFA255A498B0000F9B2 /* AcknowledgementText.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		07EADF362561B4C500786F36 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				07EADF3C2561B6B000786F36 /* TVDetail.swift */,
+				07EADF372561B4CF00786F36 /* MovieDetail.swift */,
+				07EADF412561B86800786F36 /* CreditDetail.swift */,
+				07EADF4A2561BCFA00786F36 /* Crew.swift */,
+				079A1CAE256343A800E934D2 /* Movie.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		07FF3F6925639CAB009B2238 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				07FF3F6A25639CB7009B2238 /* ListRowModifier.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -140,12 +280,18 @@
 				07AAE86C25567A6C000E2638 /* Sources */,
 				07AAE86D25567A6C000E2638 /* Frameworks */,
 				07AAE86E25567A6C000E2638 /* Resources */,
+				07FF3F96256471DA009B2238 /* ShellScript */,
+				07FF3F8725645493009B2238 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = FMSearch;
+			packageProductDependencies = (
+				07AD1F8D25579E3400C6E365 /* Nuke */,
+				07AD1F9325579E4700C6E365 /* FetchImage */,
+			);
 			productName = FMSearch;
 			productReference = 07AAE87025567A6C000E2638 /* FMSearch.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +363,10 @@
 				Base,
 			);
 			mainGroup = 07AAE86725567A6C000E2638;
+			packageReferences = (
+				07AD1F8C25579E3400C6E365 /* XCRemoteSwiftPackageReference "Nuke" */,
+				07AD1F9225579E4700C6E365 /* XCRemoteSwiftPackageReference "FetchImage" */,
+			);
 			productRefGroup = 07AAE87125567A6C000E2638 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,6 +383,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07FF3F92256470BA009B2238 /* .swiftlint.yml in Resources */,
 				07AAE87B25567A6C000E2638 /* Preview Assets.xcassets in Resources */,
 				07AAE87825567A6C000E2638 /* Assets.xcassets in Resources */,
 			);
@@ -254,13 +405,73 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		07FF3F8725645493009B2238 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint autocorrect && swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		07FF3F96256471DA009B2238 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftformat >/dev/null; then\n  swiftformat . --swiftversion 5.3\nelse\n  echo \"warning: SwiftFormat not installed, download from https://github.com/nicklockwood/SwiftFormat\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		07AAE86C25567A6C000E2638 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07AAE8E225575121000E2638 /* SearchView.swift in Sources */,
+				078EDEFB255A498B0000F9B2 /* AcknowledgementText.swift in Sources */,
 				07AAE87625567A6C000E2638 /* ContentView.swift in Sources */,
+				07EADF382561B4CF00786F36 /* MovieDetail.swift in Sources */,
+				078EDEEC255A174C0000F9B2 /* HomeView.swift in Sources */,
+				07AAE8FC255765E1000E2638 /* Formatters.swift in Sources */,
+				07AAE8B625568AF5000E2638 /* SearchViewModel.swift in Sources */,
+				07AD1F9925579E7300C6E365 /* PosterImage.swift in Sources */,
+				07AD1F9F2558C5AE00C6E365 /* SearchBar.swift in Sources */,
+				07AAE8A725567AB3000E2638 /* AsyncContentView.swift in Sources */,
+				078EDF01255CC89E0000F9B2 /* NetworkManager.swift in Sources */,
+				078EDEF1255A19030000F9B2 /* HomeViewModel.swift in Sources */,
+				07AAE8C3255694C7000E2638 /* URLSession+Ext.swift in Sources */,
 				07AAE87425567A6C000E2638 /* FMSearchApp.swift in Sources */,
+				07FF3F782563A3B0009B2238 /* CrewRow.swift in Sources */,
+				079A1CAF256343A800E934D2 /* Movie.swift in Sources */,
+				07EADF422561B86800786F36 /* CreditDetail.swift in Sources */,
+				07AAE8A225567A98000E2638 /* LoadableObject.swift in Sources */,
+				07FF3F6B25639CB7009B2238 /* ListRowModifier.swift in Sources */,
+				07FF3F6525639A28009B2238 /* Array+Ext.swift in Sources */,
+				07EADF4B2561BCFA00786F36 /* Crew.swift in Sources */,
+				07EADF3D2561B6B000786F36 /* TVDetail.swift in Sources */,
+				07EADF2D2561B31400786F36 /* MovieDetailView.swift in Sources */,
+				07FF3F802563A54F009B2238 /* CrewListView.swift in Sources */,
+				07AAE8D025573E4C000E2638 /* PublishedObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,6 +791,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		07AD1F8C25579E3400C6E365 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.1.2;
+			};
+		};
+		07AD1F9225579E4700C6E365 /* XCRemoteSwiftPackageReference "FetchImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/FetchImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		07AD1F8D25579E3400C6E365 /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 07AD1F8C25579E3400C6E365 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
+		07AD1F9325579E4700C6E365 /* FetchImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 07AD1F9225579E4700C6E365 /* XCRemoteSwiftPackageReference "FetchImage" */;
+			productName = FetchImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 07AAE86825567A6C000E2638 /* Project object */;
 }
