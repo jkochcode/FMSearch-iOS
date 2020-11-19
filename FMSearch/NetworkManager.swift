@@ -86,25 +86,14 @@ struct NetworkManager {
 
     func loadMovieDetail(for id: Int) -> AnyPublisher<MovieDetail, Error> {
         var components = URLComponents(string: "\(baseUrl)/movie/\(id)")!
-        components.queryItems = [apiKey]
+        components.queryItems = [
+            apiKey,
+            URLQueryItem(name: "append_to_response", value: "credits")
+        ]
 
-        let detailsPublisher = URLSession.shared.publisher(
-            for: components.url!, responseType: Movie.self, decoder: decoder
+        return URLSession.shared.publisher(
+            for: components.url!, decoder: decoder
         )
-        let crewPublisher = loadCredits(for: id, in: .movie)
-
-        return Publishers.Zip(detailsPublisher, crewPublisher)
-            .map {
-                MovieDetail(
-                    movie: $0.0, crew: $0.1,
-                    departments: $0.1.map(\.department).unique().sorted(),
-                    director: $0.1.first(where: { $0.job == "Director" }),
-                    dop: $0.1.first(where: {
-                        $0.job == "Director of Photography"
-                    })
-                )
-            }
-            .eraseToAnyPublisher()
     }
 
     func loadTVDetail(for id: Int) -> AnyPublisher<TVDetail, Error> {

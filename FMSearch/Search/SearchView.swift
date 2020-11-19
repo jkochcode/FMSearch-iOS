@@ -5,7 +5,6 @@
 //  Created by Josh Koch on 11/7/20.
 //
 
-import FetchImage
 import SwiftUI
 
 struct SearchView: View {
@@ -23,13 +22,7 @@ struct SearchView: View {
                             publisher: viewModel.loadMovie(id: movie.id))
                     ) {
                         HStack {
-                            if let posterPath = movie.posterPath {
-                                PosterImage(path: posterPath, small: true)
-                            } else {
-                                Image("placeholder")
-                                    .resizable()
-                                    .frame(width: 80, height: 120)
-                            }
+                            PosterImage(path: movie.posterPath, small: true)
                             VStack(alignment: .leading) {
                                 Text(movie.title)
                                     .font(.headline)

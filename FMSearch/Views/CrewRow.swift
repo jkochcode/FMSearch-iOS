@@ -5,7 +5,6 @@
 //  Created by Josh Koch on 11/16/20.
 //
 
-import FetchImage
 import SwiftUI
 
 struct CrewRow: View {
@@ -13,13 +12,7 @@ struct CrewRow: View {
 
     var body: some View {
         HStack {
-            if let profilePath = crew.profilePath {
-                PosterImage(path: profilePath, small: true)
-            } else {
-                Image("placeholder")
-                    .resizable()
-                    .frame(width: 80, height: 120)
-            }
+            PosterImage(path: crew.profilePath, small: true)
             VStack(alignment: .leading, spacing: 4) {
                 Text(crew.name)
                 Text(crew.job)
