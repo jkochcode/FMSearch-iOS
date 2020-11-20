@@ -10,8 +10,8 @@ import Foundation
 struct Crew: Decodable {
     let id: Int
     let creditId: String
-    let job: String
+    let job: String?
     let name: String
-    let department: String
+    let department: String?
     let profilePath: String?
 }

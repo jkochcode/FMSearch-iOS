@@ -11,74 +11,18 @@ import SwiftUI
 struct MovieDetailView: View {
     var publisher: AnyPublisher<MovieDetail, Error>
 
-    @State private var revealDescription = false
-
     var body: some View {
         AsyncContentView(source: publisher) { detail in
             ScrollView(showsIndicators: false) {
                 VStack(spacing: 16) {
-                    VStack(spacing: 4) {
-                        PosterImage(path: detail.posterPath)
-                        Text(detail.title)
-                            .font(.headline)
-                        if let date = detail.releaseDate {
-                            Text(date)
-                                .font(.caption)
-                        }
-                    }
-                    DisclosureGroup(
-                        "Description", isExpanded: $revealDescription
-                    ) {
-                        if let overview = detail.overview {
-                            Text(overview)
-                                .font(.body)
-                        }
-                    }
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text("Director: ")
-                                .fontWeight(.light)
-                            if let director = detail.director {
-                                Text(director.name)
-                            }
-                            Spacer()
-                        }
-                        Spacer()
-                        VStack(alignment: .leading) {
-                            Text("Cinematographer: ")
-                                .fontWeight(.light)
-                            if let dop = detail.dop {
-                                Text(dop.name)
-                            }
-                            Spacer()
-                        }
-                    }
+                    DetailTopView(path: detail.posterPath, title: detail.title, date: detail.releaseDate)
 
-                    if let crew = detail.crew,
-                       let departments = detail.departments {
-                        LazyVGrid(
-                            columns: [
-                                GridItem(.flexible()),
-                                GridItem(.flexible()),
-                                GridItem(.flexible())
-                            ], spacing: 16
-                        ) {
-                            ForEach(departments, id: \.self) { dep in
-                                NavigationLink(
-                                    destination: CrewListView(
-                                        crew: crew, department: dep
-                                    )
-                                ) {
-                                    Text(dep)
-                                        .fontWeight(.bold)
-                                        .accentColor(.primary)
-                                        .frame(maxWidth: .infinity, minHeight: 80, maxHeight: .infinity)
-                                        .border(Color.black, width: 2)
-                                        .cornerRadius(4)
-                                }
-                            }
-                        }
-                    }
+                    ExpandableOverviewView(overview: detail.overview)
+
+                    ProminentCrewView(job1: "Director", crew1: detail.director,
+                                      job2: "Cinematographer", crew2: detail.dop)
+
+                    DepartmentGrid(crew: detail.crew, departments: detail.departments)
                 }
             }
             .padding(.horizontal)

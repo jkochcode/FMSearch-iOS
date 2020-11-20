@@ -15,7 +15,7 @@ struct CrewRow: View {
             PosterImage(path: crew.profilePath, small: true)
             VStack(alignment: .leading, spacing: 4) {
                 Text(crew.name)
-                Text(crew.job)
+                Text(crew.job ?? "No job credited")
             }
         }
     }

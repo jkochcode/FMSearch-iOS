@@ -16,11 +16,11 @@ struct MovieDetail {
     let crew: [Crew]?
 
     var departments: [String]? {
-        crew?.map(\.department).unique().sorted()
+        crew?.compactMap(\.department).unique().sorted()
     }
 
-    var director: Crew? {
-        crew?.first(where: { $0.job == "Director" })
+    var director: [Crew]? {
+        crew?.filter { $0.job == "Director" }
     }
 
     var dop: Crew? {

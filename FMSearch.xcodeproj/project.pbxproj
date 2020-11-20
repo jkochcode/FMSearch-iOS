@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0759C9432567207500BD15C6 /* ProminentCrewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0759C9422567207500BD15C6 /* ProminentCrewView.swift */; };
+		0759C9482567226900BD15C6 /* DepartmentGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0759C9472567226900BD15C6 /* DepartmentGrid.swift */; };
+		0759C94D256722F700BD15C6 /* ExpandableOverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0759C94C256722F700BD15C6 /* ExpandableOverviewView.swift */; };
+		0759C952256723A300BD15C6 /* DetailTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0759C951256723A300BD15C6 /* DetailTopView.swift */; };
 		078EDEEC255A174C0000F9B2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078EDEEB255A174C0000F9B2 /* HomeView.swift */; };
 		078EDEF1255A19030000F9B2 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078EDEF0255A19030000F9B2 /* HomeViewModel.swift */; };
 		078EDEFB255A498B0000F9B2 /* AcknowledgementText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078EDEFA255A498B0000F9B2 /* AcknowledgementText.swift */; };
@@ -60,6 +64,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0759C9422567207500BD15C6 /* ProminentCrewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProminentCrewView.swift; sourceTree = "<group>"; };
+		0759C9472567226900BD15C6 /* DepartmentGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentGrid.swift; sourceTree = "<group>"; };
+		0759C94C256722F700BD15C6 /* ExpandableOverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableOverviewView.swift; sourceTree = "<group>"; };
+		0759C951256723A300BD15C6 /* DetailTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTopView.swift; sourceTree = "<group>"; };
 		078EDEEB255A174C0000F9B2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		078EDEF0255A19030000F9B2 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		078EDEFA255A498B0000F9B2 /* AcknowledgementText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowledgementText.swift; sourceTree = "<group>"; };
@@ -249,6 +257,10 @@
 				07AAE8A625567AB3000E2638 /* AsyncContentView.swift */,
 				07AD1F9E2558C5AE00C6E365 /* SearchBar.swift */,
 				078EDEFA255A498B0000F9B2 /* AcknowledgementText.swift */,
+				0759C9422567207500BD15C6 /* ProminentCrewView.swift */,
+				0759C9472567226900BD15C6 /* DepartmentGrid.swift */,
+				0759C94C256722F700BD15C6 /* ExpandableOverviewView.swift */,
+				0759C951256723A300BD15C6 /* DetailTopView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -460,16 +472,20 @@
 				07AAE8E225575121000E2638 /* SearchView.swift in Sources */,
 				078EDEFB255A498B0000F9B2 /* AcknowledgementText.swift in Sources */,
 				07AAE87625567A6C000E2638 /* ContentView.swift in Sources */,
+				0759C9482567226900BD15C6 /* DepartmentGrid.swift in Sources */,
 				07EADF382561B4CF00786F36 /* MovieDetail.swift in Sources */,
 				078EDEEC255A174C0000F9B2 /* HomeView.swift in Sources */,
 				07AAE8FC255765E1000E2638 /* Formatters.swift in Sources */,
+				0759C9432567207500BD15C6 /* ProminentCrewView.swift in Sources */,
 				07AAE8B625568AF5000E2638 /* SearchViewModel.swift in Sources */,
 				07AD1F9925579E7300C6E365 /* PosterImage.swift in Sources */,
 				07AD1F9F2558C5AE00C6E365 /* SearchBar.swift in Sources */,
 				07AAE8A725567AB3000E2638 /* AsyncContentView.swift in Sources */,
 				07FF3FAA25648362009B2238 /* Show.swift in Sources */,
+				0759C94D256722F700BD15C6 /* ExpandableOverviewView.swift in Sources */,
 				078EDF01255CC89E0000F9B2 /* NetworkManager.swift in Sources */,
 				078EDEF1255A19030000F9B2 /* HomeViewModel.swift in Sources */,
+				0759C952256723A300BD15C6 /* DetailTopView.swift in Sources */,
 				07AAE8C3255694C7000E2638 /* URLSession+Ext.swift in Sources */,
 				07AAE87425567A6C000E2638 /* FMSearchApp.swift in Sources */,
 				07FF3F782563A3B0009B2238 /* CrewRow.swift in Sources */,
@@ -641,6 +657,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FMSearch/Preview Content\"";
 				DEVELOPMENT_TEAM = 879GRJWT72;
 				ENABLE_PREVIEWS = YES;
@@ -654,6 +671,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -663,6 +681,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FMSearch/Preview Content\"";
 				DEVELOPMENT_TEAM = 879GRJWT72;
 				ENABLE_PREVIEWS = YES;
@@ -676,6 +695,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};

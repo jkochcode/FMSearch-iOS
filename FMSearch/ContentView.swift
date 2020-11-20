@@ -21,6 +21,7 @@ struct ContentView: View {
                                     action: { isPresented.toggle() },
                                     label: {
                                         Image(systemName: "magnifyingglass")
+                                            .imageScale(.large)
                                     }
                                 )
                                 NavigationLink(
@@ -34,7 +35,8 @@ struct ContentView: View {
                 Spacer()
                 AcknowledgementText()
             }
-            .navigationBarTitle("Home")
+            .navigationTitle("Home")
+            .font(.system(.largeTitle, design: .rounded))
         }
     }
 }

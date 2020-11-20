@@ -49,7 +49,6 @@ struct SearchBar: View {
                 Button(
                     action: {
                         isSearching = false
-                        searchText = ""
                         UIApplication.shared.sendAction(
                             #selector(UIResponder.resignFirstResponder),
                             to: nil, from: nil, for: nil
@@ -62,7 +61,7 @@ struct SearchBar: View {
                     }
                 )
                 .transition(.move(edge: .trailing))
-                .animation(.spring())
+                .animation(.easeIn)
             }
         }
     }

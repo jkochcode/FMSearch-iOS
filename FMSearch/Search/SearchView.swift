@@ -16,26 +16,30 @@ struct SearchView: View {
                 .padding()
 
             AsyncContentView(source: viewModel) { movies in
-                List(movies) { movie in
-                    NavigationLink(
-                        destination: MovieDetailView(
-                            publisher: viewModel.loadMovie(id: movie.id))
-                    ) {
-                        HStack {
-                            PosterImage(path: movie.posterPath, small: true)
-                            VStack(alignment: .leading) {
-                                Text(movie.title)
-                                    .font(.headline)
-                                if let release = movie.releaseDate {
-                                    Text(release)
-                                        .font(.subheadline)
+                if movies.isEmpty { Text("No Results")
+
+                } else {
+                    List(movies) { movie in
+                        NavigationLink(
+                            destination: MovieDetailView(
+                                publisher: viewModel.loadMovie(id: movie.id))
+                        ) {
+                            HStack {
+                                PosterImage(path: movie.posterPath, small: true)
+                                VStack(alignment: .leading) {
+                                    Text(movie.title)
+                                        .font(.headline)
+                                    if let release = movie.releaseDate {
+                                        Text(release)
+                                            .font(.subheadline)
+                                    }
                                 }
+                                .padding(.horizontal, 8)
                             }
-                            .padding(.horizontal, 8)
                         }
                     }
+                    .listStyle(GroupedListStyle())
                 }
-                .listStyle(GroupedListStyle())
             }
             Spacer()
             AcknowledgementText()
