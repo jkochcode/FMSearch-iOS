@@ -15,9 +15,13 @@ struct CrewRow: View {
             PosterImage(path: crew.profilePath, small: true)
             VStack(alignment: .leading, spacing: 4) {
                 Text(crew.name)
+                    .fontWeight(.semibold)
                 Text(crew.job ?? "No job credited")
+                    .foregroundColor(.secondary)
+                    .fontWeight(.medium)
             }
         }
+        .padding(.vertical, 8)
     }
 }
 

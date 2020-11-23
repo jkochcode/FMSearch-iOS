@@ -18,20 +18,13 @@ struct Trending {
     let shows: [TrendingResult]
 }
 
-struct SearchResult: Decodable, Equatable, Identifiable, Hashable {
-    let id: Int
-    let title: String
-    let overview: String?
-    let posterPath: String?
-    let releaseDate: String?
-}
-
 struct CreditsResponse: Decodable {
     let crew: [Crew]
 }
 
 enum MediaType: String {
-    case movie, show
+    case movie = "Movie"
+    case tv = "TV"
 }
 
 struct NetworkManager {
@@ -71,9 +64,9 @@ struct NetworkManager {
             .eraseToAnyPublisher()
     }
 
-    func loadSearch(for query: String, in type: MediaType) -> AnyPublisher<[SearchResult], Error> {
+    func loadSearch(for query: String, in media: MediaType) -> AnyPublisher<[SearchResult], Error> {
         var components = URLComponents(
-            string: "\(baseUrl)/search/\(type.rawValue)")!
+            string: "\(baseUrl)/search/\(media.rawValue.lowercased())")!
         components.queryItems = [
             apiKey,
             URLQueryItem(name: "query", value: query)
@@ -118,14 +111,5 @@ struct NetworkManager {
             .decode(type: CreditsResponse.self, decoder: decoder)
             .map(\.crew)
             .eraseToAnyPublisher()
-    }
-
-    func loadCredit(for id: Int) -> AnyPublisher<CreditDetail, Error> {
-        var components = URLComponents(string: "\(baseUrl)/credit/\(id)}")!
-        components.queryItems = [apiKey]
-
-        return URLSession.shared.publisher(
-            for: components.url!, decoder: decoder
-        )
     }
 }

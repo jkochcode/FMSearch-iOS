@@ -25,7 +25,7 @@ struct MovieDetailView: View {
                     DepartmentGrid(crew: detail.crew, departments: detail.departments)
                 }
             }
-            .padding(.horizontal)
+            .padding([.horizontal, .bottom])
             .navigationTitle(detail.title)
         }
     }

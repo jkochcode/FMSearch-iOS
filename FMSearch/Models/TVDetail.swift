@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct TVDetail: Decodable {
+struct TVDetail: Identifiable {
     let id: Int
     let name: String
     let posterPath: String?
-    let firstAirDate: String?
+    let firstAirDate: Date?
     let overview: String?
     let createdBy: [Crew]?
     let crew: [Crew]?
@@ -21,7 +21,7 @@ struct TVDetail: Decodable {
     }
 }
 
-extension TVDetail {
+extension TVDetail: Decodable {
     enum CodingKeys: String, CodingKey {
         case id, name, posterPath, firstAirDate, overview, createdBy, credits
     }
@@ -35,7 +35,7 @@ extension TVDetail {
         id = try container.decode(Int.self, forKey: .id)
         name = try container.decode(String.self, forKey: .name)
         posterPath = try container.decodeIfPresent(String.self, forKey: .posterPath)
-        firstAirDate = try container.decodeIfPresent(String.self, forKey: .firstAirDate)
+        firstAirDate = try container.decodeIfPresent(Date.self, forKey: .firstAirDate)
         overview = try container.decodeIfPresent(String.self, forKey: .overview)
         createdBy = try container.decodeIfPresent([Crew].self, forKey: .createdBy)
 

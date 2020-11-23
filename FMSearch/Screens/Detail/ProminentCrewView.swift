@@ -22,8 +22,10 @@ struct ProminentCrewView: View {
                 if let prom = crew1 {
                     Text(prom.map(\.name).joined(separator: ", "))
                         .fontWeight(.semibold)
+                } else {
+                    Text("N/A")
+                        .fontWeight(.semibold)
                 }
-                Spacer()
             }
             Spacer()
             if let title2 = job2 {
@@ -34,8 +36,10 @@ struct ProminentCrewView: View {
                     if let prom2 = crew2 {
                         Text(prom2.name)
                             .fontWeight(.semibold)
+                    } else {
+                        Text("N/A")
+                            .fontWeight(.semibold)
                     }
-                    Spacer()
                 }
             }
         }

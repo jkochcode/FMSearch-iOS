@@ -11,32 +11,17 @@ struct ContentView: View {
     @State private var isPresented = false
 
     var body: some View {
-        NavigationView {
-            ScrollView {
-                HomeView()
-                    .toolbar {
-                        ToolbarItem(placement: .primaryAction) {
-                            VStack {
-                                Button(
-                                    action: { isPresented.toggle() },
-                                    label: {
-                                        Image(systemName: "magnifyingglass")
-                                            .imageScale(.large)
-                                    }
-                                )
-                                NavigationLink(
-                                    destination: SearchView(
-                                        viewModel: SearchViewModel()),
-                                    isActive: $isPresented
-                                ) { EmptyView() }
-                            }
-                        }
-                    }
-                Spacer()
-                AcknowledgementText()
-            }
-            .navigationTitle("Home")
-            .font(.system(.largeTitle, design: .rounded))
+        TabView {
+            HomeView()
+                .tabItem {
+                    Image(systemName: "house")
+                    Text("Home")
+                }
+            SearchView()
+                .tabItem {
+                    Image(systemName: "magnifyingglass")
+                    Text("Search")
+                }
         }
     }
 }

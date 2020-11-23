@@ -9,14 +9,15 @@ import SwiftUI
 
 struct SearchBar: View {
     @Binding var searchText: String
-
+    @Binding var selection: MediaType
+    var load: () -> Void
+    var media: [MediaType] = [.movie, .tv]
     @State private var isSearching = false
 
     var body: some View {
-        HStack {
-            TextField("Search...", text: $searchText)
+        VStack {
+            TextField("Search...", text: $searchText, onCommit: { load() })
                 .padding(.leading, 24)
-
                 .padding(.vertical, 8)
                 .padding(.horizontal, 16)
                 .background(Color(.systemGray5))
@@ -40,35 +41,25 @@ struct SearchBar: View {
                             )
                         }
                     }
-                    .padding(.horizontal, 32)
                     .foregroundColor(.gray)
+                    .padding(.horizontal, 32)
                 )
                 .transition(.move(edge: .trailing))
                 .animation(.spring())
-            if isSearching {
-                Button(
-                    action: {
-                        isSearching = false
-                        UIApplication.shared.sendAction(
-                            #selector(UIResponder.resignFirstResponder),
-                            to: nil, from: nil, for: nil
-                        )
-                    },
-                    label: {
-                        Text("Cancel")
-                            .padding(.trailing)
-                            .padding(.leading, 0)
-                    }
-                )
-                .transition(.move(edge: .trailing))
-                .animation(.easeIn)
-            }
+
+            Picker(selection: $selection, label: Text(""), content: {
+                ForEach(media, id: \.self) { media in
+                    Text(media.rawValue)
+                }
+            })
+                .pickerStyle(SegmentedPickerStyle())
+                .padding(.horizontal)
         }
     }
 }
 
 struct SearchBar_Previews: PreviewProvider {
     static var previews: some View {
-        SearchBar(searchText: .constant("Tenet"))
+        SearchBar(searchText: .constant("Tenet"), selection: .constant(.movie), load: {})
     }
 }

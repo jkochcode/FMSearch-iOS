@@ -13,6 +13,7 @@ struct PosterImage: View {
     var small: Bool = false
 
     let baseUrl = "https://image.tmdb.org/t/p/w500/"
+    private let cornerRadius: CGFloat = 8
 
     var body: some View {
         if let path = path {
@@ -23,16 +24,16 @@ struct PosterImage: View {
                         .opacity(0.3)
                 }
                 .resizable()
+                .cornerRadius(cornerRadius)
                 .frame(width: small ? 80 : 128, height: small ? 120 : 192)
-                .cornerRadius(4)
                 .shadow(radius: 4)
+                .contentShape(RoundedRectangle(cornerRadius: cornerRadius, style: .continuous))
         } else {
             Image("placeholder")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
+                .cornerRadius(cornerRadius)
                 .frame(width: small ? 80 : 128, height: small ? 120 : 192)
-                .cornerRadius(4)
-                .shadow(radius: 4)
         }
     }
 }

@@ -19,7 +19,6 @@ platform :ios do
   lane :beta do
     ensure_git_status_clean
     increment_build_number
-    increment_version_number
     build_app
     changelog = prompt(
       text: "Changelog: ",

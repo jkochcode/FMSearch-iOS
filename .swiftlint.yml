@@ -3,6 +3,7 @@ identifier_name:
     - id
     - URL
     - GlobalAPIKey
+    - tv
 line_length:
   ignores_comments: true
   

@@ -12,6 +12,7 @@ struct AcknowledgementText: View {
         Text("Powered by The Movie DB @ themoviedb.org")
             .font(.caption)
             .fontWeight(.light)
+            .padding()
     }
 }
 
