@@ -37,7 +37,6 @@ class SearchViewModel: ObservableObject {
                         break
                     }
                 } receiveValue: { [weak self] results in
-                    print(results)
                     self?.state = .loaded(results)
                 }
                 .store(in: &cancellables)

@@ -29,7 +29,6 @@ class PublishedObject<Wrapped: Publisher>: LoadableObject {
                     Just(LoadingState.failed(error))
                 }
                 .sink { [weak self] state in
-                    print(state)
                     self?.state = state
                 }
     }
